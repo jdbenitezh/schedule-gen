@@ -9,11 +9,11 @@ const UserIntroParms = (props: IUserIntroParmsProps) => {
   const [selectedDate, setSelectedDate] = useState<Dayjs>(dayjs());
 
   const updateButtonClicked = () => {
+
     props.onUpdateData(selectedDate);
   }
 
   return (
-
 
     <>
 
@@ -21,7 +21,7 @@ const UserIntroParms = (props: IUserIntroParmsProps) => {
         <Grid item xs={12} md={6}>
           <DatePicker views={["year", "month"]} defaultValue={dayjs()}
             label="Mes a generar"
-            onChange={() => setSelectedDate}
+            onChange={(newValue) => setSelectedDate(newValue == null ? selectedDate : newValue)}
           />
         </Grid>
         <Grid item xs={12} md={6}>

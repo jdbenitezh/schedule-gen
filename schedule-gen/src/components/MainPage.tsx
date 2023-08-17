@@ -10,6 +10,7 @@ const MainPage = () => {
     const [selectedDate, setSelectedDate] = useState<Dayjs>(dayjs());
 
     const onGenerate = (userDate: Dayjs): void => {
+
         setSelectedDate(userDate)
     };
 
