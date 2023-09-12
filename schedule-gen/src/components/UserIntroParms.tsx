@@ -4,13 +4,13 @@ import dayjs, { Dayjs } from "dayjs";
 import { useState } from "react";
 import { IUserIntroParmsProps } from "../interfaces/IUserIntroParmsProps";
 
-const UserIntroParms = (props: IUserIntroParmsProps) => {
+const UserIntroParms = ({ onUpdateDate }: IUserIntroParmsProps) => {
 
   const [selectedDate, setSelectedDate] = useState<Dayjs>(dayjs());
 
   const updateButtonClicked = () => {
 
-    props.onUpdateData(selectedDate);
+    onUpdateDate(selectedDate);
   }
 
   return (

@@ -2,5 +2,5 @@ import { Dayjs } from "dayjs";
 
 export interface IUserIntroParmsProps {
 
-  onUpdateData: (newDate: Dayjs) => void;
+  onUpdateDate: React.Dispatch<React.SetStateAction<Dayjs>>
 }
